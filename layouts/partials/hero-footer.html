@@ -6,9 +6,15 @@
       <ul>
         {{- range $clientLogos }}
         <li>
-          <a {{ if .url }} href="{{ .url }}" {{ end }}>
-            <img class="partner-logo" src="{{ printf "/images/logos/clients/%s.svg" .logo | relURL }}">
-          </a>
+            {{ if .url }}
+            <a href="{{ .url }}">
+              <img class="partner-logo" src="{{ printf "/images/logos/clients/%s.svg" .logo | relURL }}">
+            </a>
+            {{ else }}
+            <div style="margin: 15px;">
+              <img class="partner-logo" src="{{ printf "/images/logos/clients/%s.svg" .logo | relURL }}">
+            </div>
+            {{ end }}
         </li>
         {{- end }}
       </ul>

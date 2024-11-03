@@ -22,6 +22,9 @@ Hero styles
 
 .hero-foot {
     img.partner-logo {
-        height: 70px;
+        max-height: 70px;
+        max-width: 150px;
+        height: auto;
+        width: auto;
     }
 }
